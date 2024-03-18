@@ -14,26 +14,12 @@ Future<List<Movie>> getTrendingMovie()async{
 final response= await http.get(Uri.parse(_trendingUrl));
 if(response.statusCode==200){
 final   decodeData =json.decode(response.body)['results'] as List;
-print(decodeData);
+// print(decodeData);
 return decodeData.map((movie) => Movie.fromJson(movie)).toList();
 }else{
   throw Exception('Somthing happened');
 }
 }
-
-// getMovies()async{
-//   final respons = await http.post(
-//     Uri.parse("uri"),
-//     headers: {
-//       "x-api-key":"",
-
-//     },
-//     body: {
-//       "name":"ayyoob",
-//       "password" :"123"
-//     }
-//   );
-// }
 
 
 
@@ -41,7 +27,7 @@ Future<List<Movie>>getTopratedMovie()async{
   final response=await http.get(Uri.parse(_topRatedUrl ));
   if(response.statusCode==200){
     final decodeData=json.decode(response.body)['results']as List;
-    print(decodeData);
+    // print(decodeData);
     return decodeData.map((movie) => Movie.fromJson(movie)).toList();
   }else{
     throw Exception('Somthing happened');
@@ -57,7 +43,7 @@ Future<List<Movie>>getNewandHot() async{
   final response=await http.get(Uri.parse(_newandHotUrl));
   if(response.statusCode==200){
     final decodeData=json.decode(response.body)['results'] as List;
-    print(decodeData);
+    // print(decodeData);
     return decodeData.map((movie) => Movie.fromJson(movie)).toList();
   }else{
     throw Exception('Something happened');
@@ -71,7 +57,7 @@ Future<List<Movie>>getSearchIdle()async{
   final response=await http.get(Uri.parse(_searchMovieUrl));
   if(response.statusCode==200){
     final decodeData=json.decode(response.body)['results'] as List;
-    print(decodeData);
+    // print(decodeData);
     return decodeData.map((movie) => Movie.fromJson(movie)).toList();
   }else{
     throw Exception('Something happened');
@@ -85,7 +71,7 @@ Future<List<Movie>>searchResult(String movie) async{
   final response=await http.get(Uri.parse(searchResult));
   if(response.statusCode==200){
     final decodeData=json.decode(response.body)['results'] as List;
-    print(decodeData.toString());
+    // print(decodeData.toString());
     return decodeData.map((movie) => Movie.fromJson(movie)).toList();
   }else{
     throw Exception('Somthing happened');
