@@ -19,7 +19,7 @@ class _ScreenSearchState extends State<ScreenSearch> {
   late Future <List<Movie>>searchResult;
   final Debouncer _debouncer = Debouncer();
 
-  void _handleTextFieldChange(String value){
+  void handleTextFieldChange(String value){
   const duration = Duration(milliseconds: 500);
   _debouncer.debounce(
     duration: duration,

@@ -144,10 +144,10 @@ Widget _buildComingSoon(){
               },
             );
           } else {
-            return Center(child: Text("No data available"));
+            return const Center(child: Text("No data available"));
           }
         } else {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         }
       },
     ),

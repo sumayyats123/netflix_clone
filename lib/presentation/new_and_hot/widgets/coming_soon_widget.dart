@@ -83,7 +83,7 @@ class ComingSoonWidget extends StatelessWidget {
             ],
           ),
           khight,
-           Text("Coming Soon"),
+           const Text("Coming Soon"),
           khight,
           const Text("Tall Girl 2",style: TextStyle(
             fontSize: 16,
@@ -98,7 +98,7 @@ class ComingSoonWidget extends StatelessWidget {
                      ),
                      ),
            ) ,          
-           SizedBox(height:20,)
+           const SizedBox(height:20,)
           ],
           ) ,
         ),

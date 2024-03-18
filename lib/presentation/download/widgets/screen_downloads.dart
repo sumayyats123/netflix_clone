@@ -22,9 +22,9 @@ final _widgetList=[
         child: AppBarWidget(title: "Downloads",),
         ),
       body:ListView.separated(
-        padding:EdgeInsets.all(10) ,
+        padding:const EdgeInsets.all(10) ,
         itemBuilder:(ctx,index)=>_widgetList[index],
-         separatorBuilder:(ctx,index)=>SizedBox(height: 25,),
+         separatorBuilder:(ctx,index)=>const SizedBox(height: 25,),
           itemCount:_widgetList.length,
           ),
     );
@@ -73,20 +73,20 @@ class Section2 extends StatelessWidget {
         ),
         DownloadsImageWidgets(
           imageList: imageList[0],
-          margin: EdgeInsets.only(left:155,top: 50 ),
+          margin: const EdgeInsets.only(left:155,top: 50 ),
           angle:25 ,
           size: Size(size.width*0.35,size.width*0.55),
         ), 
         DownloadsImageWidgets(
           imageList: imageList[1], 
-          margin: EdgeInsets.only(right:155,top: 50 ),
+          margin: const EdgeInsets.only(right:155,top: 50 ),
           angle: -20,
            size: Size(size.width*0.35,size.width*0.55),
         ),
          DownloadsImageWidgets(
           imageList: imageList[2],
           radius:8 , 
-          margin: EdgeInsets.only(bottom: 40,top: 54),
+          margin: const EdgeInsets.only(bottom: 40,top: 54),
            size: Size(size.width*0.4,size.width*0.6),
         ),
         ],

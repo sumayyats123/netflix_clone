@@ -33,7 +33,7 @@ setState(() {
   Widget build(BuildContext context) {
     return Stack (
       children: [
-        Container(  height: double.infinity,  child: _videoControler.value.isInitialized?AspectRatio(aspectRatio: _videoControler.value.aspectRatio,child:VideoPlayer(_videoControler,) ,):Center(child: CircularProgressIndicator(),)
+        Container(  height: double.infinity,  child: _videoControler.value.isInitialized?AspectRatio(aspectRatio: _videoControler.value.aspectRatio,child:VideoPlayer(_videoControler,) ,):const Center(child: CircularProgressIndicator(),)
         ),
         Align(
           alignment: Alignment.bottomCenter,
